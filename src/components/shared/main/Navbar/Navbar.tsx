@@ -13,7 +13,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-black/50 backdrop-blur-sm p-4 text-white relative">
+    <nav className="fixed top-0 left-0 w-screen bg-black/10 backdrop-blur-xs p-2 md:p-3 text-white z-50">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex-shrink-0">
           <Image
@@ -21,7 +21,7 @@ const Navbar = () => {
             alt="Florida Yacht Logo"
             width={80}
             height={80}
-            className="w-16 h-16 sm:w-20 sm:h-20 lg:w-20 lg:h-20"
+            className="w-14 h-14 sm:w-20 sm:h-20 lg:w-20 lg:h-20"
           />
         </div>
 
@@ -79,7 +79,7 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="lg:hidden absolute top-full left-0 w-full bg-black/90 backdrop-blur-sm border-t border-white/20">
+        <div className="lg:hidden absolute top-full left-0 w-full bg-gradient-to-b from-black/50 to-black/90 backdrop-blur-xs border-t border-white/20">
           <div className="container mx-auto py-4 px-4 flex flex-col gap-4">
             <Link
               href="/"
